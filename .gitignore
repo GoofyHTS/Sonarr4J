@@ -1,0 +1,12 @@
+# IntelliJ
+*.iml
+*.iws
+.idea/*
+
+# Ecplise
+.project
+.classpath
+.settings/*
+
+# Maven
+target/*
