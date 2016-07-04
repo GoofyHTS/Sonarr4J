@@ -22,10 +22,28 @@
  * SOFTWARE.
  */
 
-package goofyhts.sonarr4j.rest.api;
+package goofyhts.sonarr4j.rest.api.impl;
+
+import goofyhts.sonarr4j.rest.api.SonarrApi;
 
 /**
  * Created by Goofy on 2016/07/04.
  */
-public interface SonarrApi {
+public class SonarrApiImpl implements SonarrApi {
+
+    private String baseUrl;
+    private String apiKey;
+
+    public SonarrApiImpl(String baseUrl, String apiKey) {
+        this.baseUrl = baseUrl;
+        this.apiKey = apiKey;
+    }
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public String getApiKey() {
+        return apiKey;
+    }
 }

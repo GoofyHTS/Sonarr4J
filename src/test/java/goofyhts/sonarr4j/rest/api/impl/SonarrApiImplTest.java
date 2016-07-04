@@ -22,10 +22,25 @@
  * SOFTWARE.
  */
 
-package goofyhts.sonarr4j.rest.api;
+package goofyhts.sonarr4j.rest.api.impl;
+
+import goofyhts.sonarr4j.rest.api.SonarrApi;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Goofy on 2016/07/04.
  */
-public interface SonarrApi {
+public class SonarrApiImplTest {
+
+    @Test
+    public void sonarrApiTest() throws Exception {
+        String baseUrl = "http://base.url.com";
+        String apiKey = "apiKey";
+
+        SonarrApiImpl sonarrApiImpl = new SonarrApiImpl(baseUrl, apiKey);
+
+        assertEquals(baseUrl, sonarrApiImpl.getBaseUrl());
+        assertEquals(apiKey, sonarrApiImpl.getApiKey());
+    }
 }
